@@ -11,16 +11,18 @@ import { Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <CreateNavBar />
-      <Routes>
-        <Route index element={<HomePage />} />
-      </Routes>
-      <Routes>
-        <Route path="/Space" element={<SpacePage />} />
-      </Routes>
-      <Routes>
-        <Route path="/Mars" element={<MarsPage />} />
-      </Routes>
+      <div>
+        <CreateNavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+        <Routes>
+          <Route path="Space" element={<SpacePage />} />
+        </Routes>
+        <Routes>
+          <Route path="Mars" element={<MarsPage />} />
+        </Routes>
+      </div>
     </div>
   );
 }

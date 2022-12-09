@@ -6,6 +6,8 @@ const SpacePage = () => {
   const [DateInput, SetDateInput] = useState(null);
   const [CurrentInput, SetCurrentInput] = useState(null);
   const [SrcInput, setSRCinput] = useState(null);
+  const [TitleInput, SetTitleInput] = useState(null);
+  const [DescriptionInput, SetDescriptionInput] = useState(null);
 
   const handleDateChange = (e) => {
     const Date = e.target.value;
@@ -24,7 +26,10 @@ const SpacePage = () => {
         return res.json();
       })
       .then((data) => {
+        console.log(data);
         setSRCinput(data["hdurl"]);
+        SetTitleInput(data["title"]);
+        SetDescriptionInput(data["explanation"]);
       });
   });
 
@@ -45,7 +50,7 @@ const SpacePage = () => {
       </div>
 
       <div className="title-container">
-        <h2 className="nasa-title"></h2>
+        {TitleInput && <h2 className="nasa-title">{TitleInput}</h2>}
       </div>
 
       <div className="picture-container">
@@ -53,7 +58,9 @@ const SpacePage = () => {
       </div>
 
       <div className="description">
-        <p className="nasa-description"></p>
+        {DescriptionInput && (
+          <p className="nasa-description">{DescriptionInput}</p>
+        )}
       </div>
 
       <div className="bottom-border"></div>
