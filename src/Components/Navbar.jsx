@@ -1,13 +1,13 @@
 import React from "react";
-import "./CSS/Nav.css";
+import "../CSS/Nav.css";
 import { Link } from "react-router-dom";
 
 const CreateNavBar = () => {
   return (
-    <nav class="navbar">
-      <h1 class="nav-logo">SPACE EXPLORER</h1>
+    <nav className="navbar">
+      <h1 className="nav-logo">SPACE EXPLORER</h1>
 
-      <ul class="nav-links">
+      <ul className="nav-links">
         <li className="nav-text">
           <Link id="space-nav" to="Home">
             HOME
@@ -15,7 +15,7 @@ const CreateNavBar = () => {
         </li>
 
         <li className="nav-text">
-          <Link id="space-nav" to="Space">
+          <Link to="Space" id="space-nav">
             SPACE
           </Link>
         </li>
