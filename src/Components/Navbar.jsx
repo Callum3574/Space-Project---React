@@ -9,7 +9,7 @@ const CreateNavBar = () => {
 
       <ul className="nav-links">
         <li className="nav-text">
-          <Link id="space-nav" to="/">
+          <Link id="space-nav" to="Home">
             HOME
           </Link>
         </li>
