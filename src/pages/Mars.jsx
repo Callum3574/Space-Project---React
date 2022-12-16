@@ -1,25 +1,23 @@
-import React from "react";
-import CreateDateInput from "../Components/DateInput";
-import CreatePictureContainer from "../Components/ImgContainer";
-import { useState } from "react";
+import React, { useState } from "react";
+import CreateDateInput from "../Components/DateInput.jsx";
 
-const MarsPage = ({ HandleDateChange }) => {
-  const [CameraState, SetCameraState] = useState(null);
-
+const MarsPage = () => {
   return (
-    <div className="flex-container-mars">
+    <div>
       <div>
-        <h4 className="text">Search by date and camera type...</h4>
-      </div>
-      <CreateDateInput />
-      <div>
-        <select>
-          <option>NAVCAM</option>
-          <option>FRONT</option>
-          <option>REAR</option>
+        <h2 className="text">Mars Curiosity Rover</h2>
+        <select name="Cameras">
+          <option value="fhaz">FHAZ</option>
+          <option value="rhaz">RHAZ</option>
+          <option value="navcam">NAVCAM</option>
         </select>
+        <br />
+        <br />
+        <CreateDateInput
+          inputDate={InputDateMars}
+          handleDateChange={handleMarsDate}
+        />
       </div>
-      <CreatePictureContainer />
     </div>
   );
 };

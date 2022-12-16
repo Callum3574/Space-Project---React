@@ -1,18 +1,23 @@
 import React from "react";
 import "../CSS/Space.css";
 import { useState, useEffect } from "react";
+import CreateImgContainer from "../Components/ImgContainer.jsx";
+import CreateDateInput from "../Components/DateInput";
+import CreateImgTitle from "../Components/Title.jsx";
 
 const SpacePage = () => {
   const [DateInput, SetDateInput] = useState(null);
   const [CurrentInput, SetCurrentInput] = useState(null);
   const [SrcInput, setSRCinput] = useState(null);
+  const [TitleInput, SetTitleInput] = useState(null);
+  const [DescriptionInput, SetDescriptionInput] = useState(null);
 
   const handleDateChange = (e) => {
     const Date = e.target.value;
     SetCurrentInput(Date);
   };
 
-  const InputDate = (e) => {
+  const InputDate = () => {
     SetDateInput(CurrentInput);
   };
 
@@ -25,35 +30,30 @@ const SpacePage = () => {
       })
       .then((data) => {
         setSRCinput(data["hdurl"]);
+        SetTitleInput(data["title"]);
+        SetDescriptionInput(data["explanation"]);
       });
-  });
+  }, [DateInput]);
 
   return (
     <div className="flex-container">
       <div>
         <h4 className="text">Search by date...</h4>
       </div>
-      <div>
-        <input
-          onChange={handleDateChange}
-          className="date-input"
-          type="date"
-        ></input>
-        <button onClick={() => InputDate()} className="button-space">
-          OK
-        </button>
-      </div>
 
-      <div className="title-container">
-        <h2 className="nasa-title"></h2>
-      </div>
+      <CreateDateInput
+        handleDataChange={handleDateChange}
+        inputDate={InputDate}
+      />
 
-      <div className="picture-container">
-        {SrcInput && <img src={SrcInput} className="nasa-picture" />}
-      </div>
+      <CreateImgTitle TitleInput={TitleInput} />
+
+      {SrcInput && <CreateImgContainer src={SrcInput} />}
 
       <div className="description">
-        <p className="nasa-description"></p>
+        {DescriptionInput && (
+          <p className="nasa-description">{DescriptionInput}</p>
+        )}
       </div>
 
       <div className="bottom-border"></div>

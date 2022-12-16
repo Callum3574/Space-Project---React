@@ -1,13 +1,11 @@
 import React from "react";
 
-const CreatePictureContainer = ({ SrcInput }) => {
+const CreateImgContainer = ({ src }) => {
   return (
     <div className="picture-container">
-      {SrcInput && (
-        <img src={SrcInput} className="nasa-picture" alt="space-picture" />
-      )}
+      <img src={src} className="nasa-picture" />
     </div>
   );
 };
 
-export default CreatePictureContainer;
+export default CreateImgContainer;

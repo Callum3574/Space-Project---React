@@ -1,14 +1,17 @@
 import React from "react";
 
-const CreateDateInput = ({ handleDateChange, InputDate }) => {
+const CreateDateInput = ({ handleDataChange, inputDate }) => {
   return (
-    <div className="date-container">
+    <div>
       <input
-        onChange={handleDateChange}
+        onChange={handleDataChange}
         className="date-input"
         type="date"
       ></input>
-      <button onClick={() => InputDate()} className="button-space"></button>
+
+      <button className="button-space" onClick={inputDate}>
+        OK
+      </button>
     </div>
   );
 };

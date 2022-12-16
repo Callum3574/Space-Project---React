@@ -40,7 +40,6 @@
 body {
   background: linear-gradient(-90deg, #000000, #272029, #0f0216, #181620);
   background-size: 600% 600%;
-  animation: gradient 5s ease infinite;
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
 }
