@@ -1,4 +1,6 @@
 import React from "react";
+import "../CSS/DateInput.css";
+import Button from "react-bootstrap/Button";
 
 const CreateDateInput = ({ handleDataChange, inputDate }) => {
   return (
@@ -8,10 +10,9 @@ const CreateDateInput = ({ handleDataChange, inputDate }) => {
         className="date-input"
         type="date"
       ></input>
-
-      <button className="button-space" onClick={inputDate}>
+      <Button className="button-space" onClick={inputDate}>
         OK
-      </button>
+      </Button>
     </div>
   );
 };

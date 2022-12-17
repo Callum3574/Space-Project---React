@@ -1,4 +1,5 @@
 import React from "react";
+import "../CSS/ImgContainer.css";
 
 const CreateImgContainer = ({ src }) => {
   return (

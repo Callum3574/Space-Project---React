@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
@@ -9,18 +10,20 @@ import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 
 function App() {
+  const apiKey = "mj0QncoUEOT1RHuPj2eyCXmEoXlYIgQbCbsDHS83";
+
   return (
     <div className="App">
       <div>
         <CreateNavBar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage apiKey={apiKey} />} />
         </Routes>
         <Routes>
-          <Route path="Space" element={<SpacePage />} />
+          <Route path="Space" element={<SpacePage apiKey={apiKey} />} />
         </Routes>
         <Routes>
-          <Route path="Mars" element={<MarsPage />} />
+          <Route path="Mars" element={<MarsPage apiKey={apiKey} />} />
         </Routes>
       </div>
     </div>

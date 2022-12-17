@@ -5,35 +5,35 @@ import CreateImgContainer from "../Components/ImgContainer.jsx";
 import CreateDateInput from "../Components/DateInput";
 import CreateImgTitle from "../Components/Title.jsx";
 
-const SpacePage = () => {
-  const [DateInput, SetDateInput] = useState(null);
-  const [CurrentInput, SetCurrentInput] = useState(null);
-  const [SrcInput, setSRCinput] = useState(null);
-  const [TitleInput, SetTitleInput] = useState(null);
-  const [DescriptionInput, SetDescriptionInput] = useState(null);
+const SpacePage = ({ apiKey }) => {
+  const [dateInput, setDateInput] = useState(null);
+  const [currentInput, setCurrentInput] = useState(null);
+  const [srcInput, setSRCinput] = useState(null);
+  const [titleInput, setTitleInput] = useState(null);
+  const [descriptionInput, setDescriptionInput] = useState(null);
 
   const handleDateChange = (e) => {
     const Date = e.target.value;
-    SetCurrentInput(Date);
+    setCurrentInput(Date);
   };
 
   const InputDate = () => {
-    SetDateInput(CurrentInput);
+    setDateInput(currentInput);
   };
 
   useEffect(() => {
     fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=88u7Vdtn2mchlreadL3NV33PEHngIuuEStrURSXH&date=${DateInput}`
+      `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${dateInput}`
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         setSRCinput(data["hdurl"]);
-        SetTitleInput(data["title"]);
-        SetDescriptionInput(data["explanation"]);
+        setTitleInput(data["title"]);
+        setDescriptionInput(data["explanation"]);
       });
-  }, [DateInput]);
+  }, [dateInput]);
 
   return (
     <div className="flex-container">
@@ -46,13 +46,13 @@ const SpacePage = () => {
         inputDate={InputDate}
       />
 
-      <CreateImgTitle TitleInput={TitleInput} />
+      <CreateImgTitle titleInput={titleInput} />
 
-      {SrcInput && <CreateImgContainer src={SrcInput} />}
+      {srcInput && <CreateImgContainer src={srcInput} />}
 
       <div className="description">
-        {DescriptionInput && (
-          <p className="nasa-description">{DescriptionInput}</p>
+        {descriptionInput && (
+          <p className="nasa-description">{descriptionInput}</p>
         )}
       </div>
 
