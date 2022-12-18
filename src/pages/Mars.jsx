@@ -4,11 +4,14 @@ import CreateDateInput from "../Components/DateInput.jsx";
 import CreateImgContainer from "../Components/ImgContainer";
 import "../CSS/Mars.css";
 import CreateImgTitle from "../Components/Title";
+import CreateMarsImg from "../Components/CreateMarsImg.jsx";
+import Carousel from "react-bootstrap/Carousel";
+import "../CSS/ImgContainer.css";
 
 const MarsPage = ({ apiKey }) => {
   const [dateInputMars, setMarsDateInput] = useState(null);
   const [currentInputMars, setMarsCurrentInput] = useState("");
-  const [marsSRC, setMarsSRC] = useState(null);
+  const [marsSRC, setMarsSRC] = useState([]);
   const [cameraChoice, setCameraChoice] = useState("navcam");
   const [pictureInformation, setPictureInformation] = useState(null);
 
@@ -20,6 +23,7 @@ const MarsPage = ({ apiKey }) => {
   const inputDateMars = () => {
     setMarsDateInput(currentInputMars);
     console.log(dateInputMars);
+    console.log(marsSRC);
   };
 
   const handleCameraClick = (e) => {
@@ -38,8 +42,9 @@ const MarsPage = ({ apiKey }) => {
       );
 
       const data = await res.json();
-      setMarsSRC(data["photos"][0]["img_src"]);
+      setMarsSRC(data["photos"]);
       setPictureInformation(`SOL: ${data["photos"][0]["sol"]}`);
+      console.log(marsSRC);
     } catch (e) {
       console.error(e);
     }
@@ -85,8 +90,13 @@ const MarsPage = ({ apiKey }) => {
           </div>
         </div>
         <CreateImgTitle titleInput={pictureInformation} />
-
-        {marsSRC && <CreateImgContainer src={marsSRC} />}
+        <Carousel fade controls={true} className="picture-container">
+          {marsSRC.map((src, i) => {
+            return (
+              <CreateMarsImg key={i} interval={2000} src={src["img_src"]} />
+            );
+          })}
+        </Carousel>
       </div>
     </div>
   );

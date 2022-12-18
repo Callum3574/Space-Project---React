@@ -6,7 +6,6 @@ const HomePage = () => {
   return (
     <div className="home-div">
       <h1 className="text">WELCOME TO SPACE EXPLORER</h1>
-
       <div className="flex-container-home">
         <div className="flex-container-child">
           <p className="text">
@@ -14,6 +13,7 @@ const HomePage = () => {
             enables us to view pictures from outer space with a click of a
             button
           </p>
+
           <p className="text">
             This website enables you to select any date, ranging from the early
             2000's up to recent times, and to retrieve a picture Nasa took on
@@ -59,7 +59,7 @@ const HomePage = () => {
               src="https://apod.nasa.gov/apod/image/2210/LDN673.jpg"
             ></img>
           </Carousel.Item>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item interval={3000}>
             <img
               className="home-pic-fade"
               src="https://apod.nasa.gov/apod/image/2202/IC342Feller.jpg"
@@ -67,19 +67,19 @@ const HomePage = () => {
           </Carousel.Item>
         </Carousel>
         <Carousel className="home-container-child" fade controls={false}>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item interval={3000}>
             <img
               className="home-pic-fade"
               src="https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2016a-m-2000x1374.png"
             ></img>
           </Carousel.Item>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item interval={3000}>
             <img
               className="home-pic-fade"
               src="https://apod.nasa.gov/apod/image/2212/a17anaglyph_vanMeijgaarden_f.jpg"
             ></img>
           </Carousel.Item>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item interval={3000}>
             <img
               className="home-pic-fade"
               src="https://apod.nasa.gov/apod/image/2212/GeminidoverBluemoonvalley-2000.jpg"
@@ -87,19 +87,19 @@ const HomePage = () => {
           </Carousel.Item>
         </Carousel>
         <Carousel className="home-container-child" fade controls={false}>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item interval={3000}>
             <img
               className="home-pic-fade"
               src="https://apod.nasa.gov/apod/image/2210/CannonSupernova_English_8404.jpg"
             ></img>
           </Carousel.Item>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item interval={3000}>
             <img
               className="home-pic-fade"
               src="https://apod.nasa.gov/apod/image/2212/Pleiades_Estes_3000.jpg"
             ></img>
           </Carousel.Item>
-          <Carousel.Item interval={2000}>
+          <Carousel.Item interval={3000}>
             <img
               className="home-pic-fade"
               src="https://apod.nasa.gov/apod/image/2212/M16Pillar_WebbOzsarac_1668.jpg"

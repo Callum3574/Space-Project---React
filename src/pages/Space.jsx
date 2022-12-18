@@ -37,8 +37,9 @@ const SpacePage = ({ apiKey }) => {
 
   return (
     <div className="flex-container">
+      <h2 className="text">Nasa Picture of The Day</h2>
       <div>
-        <h4 className="text">Search by date...</h4>
+        <h5 className="text">Search by date...</h5>
       </div>
 
       <CreateDateInput
