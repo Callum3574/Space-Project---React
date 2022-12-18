@@ -1,12 +1,11 @@
 import Button from "react-bootstrap/Button";
 import React, { useState, useEffect } from "react";
 import CreateDateInput from "../Components/DateInput.jsx";
-import CreateImgContainer from "../Components/ImgContainer";
 import "../CSS/Mars.css";
 import CreateImgTitle from "../Components/Title";
-import CreateMarsImg from "../Components/CreateMarsImg.jsx";
 import Carousel from "react-bootstrap/Carousel";
 import "../CSS/ImgContainer.css";
+import CreateFooter from "../Components/Footer.jsx";
 
 const MarsPage = ({ apiKey }) => {
   const [dateInputMars, setMarsDateInput] = useState(null);
@@ -51,7 +50,7 @@ const MarsPage = ({ apiKey }) => {
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <div className="mars-flex-container">
         <h2 className="text">Mars Curiosity Rover</h2>
         <h5 className="text">Search by date and camera...</h5>
@@ -89,15 +88,23 @@ const MarsPage = ({ apiKey }) => {
             </Button>
           </div>
         </div>
-        <CreateImgTitle titleInput={pictureInformation} />
+        {marsSRC && <CreateImgTitle titleInput={pictureInformation} />}
+
         <Carousel fade controls={true} className="picture-container">
-          {marsSRC.map((src, i) => {
+          {marsSRC.map((src) => {
             return (
-              <CreateMarsImg key={i} interval={2000} src={src["img_src"]} />
+              <Carousel.Item interval={2000}>
+                <img
+                  src={src["img_src"]}
+                  alt="mars"
+                  className="nasa-picture"
+                ></img>
+              </Carousel.Item>
             );
           })}
         </Carousel>
       </div>
+      <CreateFooter />
     </div>
   );
 };

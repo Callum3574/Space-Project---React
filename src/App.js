@@ -8,6 +8,8 @@ import SpacePage from "./pages/Space";
 import HomePage from "./pages/HomeP";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
+import "./CSS/Footer.css";
+import Forms from "./pages/Login";
 
 function App() {
   const apiKey = "mj0QncoUEOT1RHuPj2eyCXmEoXlYIgQbCbsDHS83";
@@ -25,7 +27,11 @@ function App() {
         <Routes>
           <Route path="Mars" element={<MarsPage apiKey={apiKey} />} />
         </Routes>
+        {/* <Routes>
+          <Route path="Login" element={<Forms apiKey={apiKey} />} />
+        </Routes> */}
       </div>
+      <div class="footer"></div>
     </div>
   );
 }

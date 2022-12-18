@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import CreateImgContainer from "../Components/ImgContainer.jsx";
 import CreateDateInput from "../Components/DateInput";
 import CreateImgTitle from "../Components/Title.jsx";
+import CreateFooter from "../Components/Footer.jsx";
 
 const SpacePage = ({ apiKey }) => {
   const [dateInput, setDateInput] = useState(null);
@@ -36,28 +37,27 @@ const SpacePage = ({ apiKey }) => {
   }, [dateInput]);
 
   return (
-    <div className="flex-container">
-      <h2 className="text">Nasa Picture of The Day</h2>
-      <div>
-        <h5 className="text">Search by date...</h5>
+    <div className="wrapper">
+      <div className="flex-container">
+        <h2 className="text">Nasa Picture of The Day</h2>
+        <div>
+          <h5 className="text">Search by date...</h5>
+        </div>
+
+        <CreateDateInput
+          handleDataChange={handleDateChange}
+          inputDate={InputDate}
+        />
+
+        <CreateImgTitle titleInput={titleInput} />
+
+        <CreateImgContainer src={srcInput} />
+
+        <div className="description">
+          (<p className="nasa-description">{descriptionInput}</p>)
+        </div>
       </div>
-
-      <CreateDateInput
-        handleDataChange={handleDateChange}
-        inputDate={InputDate}
-      />
-
-      <CreateImgTitle titleInput={titleInput} />
-
-      {srcInput && <CreateImgContainer src={srcInput} />}
-
-      <div className="description">
-        {descriptionInput && (
-          <p className="nasa-description">{descriptionInput}</p>
-        )}
-      </div>
-
-      <div className="bottom-border"></div>
+      <CreateFooter />
     </div>
   );
 };

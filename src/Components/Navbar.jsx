@@ -31,6 +31,11 @@ const CreateNavBar = () => {
             WEATHER
           </Link>
         </li>
+        <li className="nav-text">
+          <Link id="space-nav" to="Login">
+            LOGIN
+          </Link>
+        </li>
       </ul>
     </nav>
   );
