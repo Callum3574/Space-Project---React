@@ -5,7 +5,6 @@ import "../CSS/Mars.css";
 import CreateImgTitle from "../Components/Title";
 import Carousel from "react-bootstrap/Carousel";
 import "../CSS/ImgContainer.css";
-import CreateFooter from "../Components/Footer.jsx";
 
 const MarsPage = ({ apiKey }) => {
   const [dateInputMars, setMarsDateInput] = useState(null);
@@ -104,7 +103,6 @@ const MarsPage = ({ apiKey }) => {
           })}
         </Carousel>
       </div>
-      <CreateFooter />
     </div>
   );
 };

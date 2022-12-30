@@ -43,3 +43,10 @@ body {
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
 }
+
+.button-question {
+  background-color: #242323;
+  border: none;
+  margin-right: 75%;
+  margin-top: 2%;
+}

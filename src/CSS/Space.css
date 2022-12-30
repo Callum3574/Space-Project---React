@@ -23,6 +23,7 @@ button:hover {
 
 .nasa-description {
   color: white;
+  overflow: hidden;
 }
 
 .description {
