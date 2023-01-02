@@ -20,6 +20,7 @@ function App() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [successfulSignIn, setSuccessfulSignIn] = useState(false);
+  const [incorrectInputPopUp, setIncorrectInputPopUp] = useState(false);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -102,6 +103,8 @@ function App() {
                 successfulSignIn={successfulSignIn}
                 signInCredentials={signInCredentials}
                 setSignInCredentials={setSignInCredentials}
+                setIncorrectInputPopUp={setIncorrectInputPopUp}
+                incorrectInputPopUp={incorrectInputPopUp}
               />
             }
           />

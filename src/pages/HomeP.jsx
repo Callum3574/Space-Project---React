@@ -28,98 +28,30 @@ const HomePage = ({ signInCredentials }) => {
           </div>
         </div>
         <div className="home-flex-container">
-          <Carousel className="home-container-child" fade controls={false}>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2211/StanHondaTLE-ISS1108.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2211/Lobster_Blanco_4000.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2210/Pelican_Almeida_2000.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-          </Carousel>
-          <Carousel className="home-container-child" fade controls={false}>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2210/Lu20220729-0826.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2210/LDN673.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2202/IC342Feller.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-          </Carousel>
-          <Carousel className="home-container-child" fade controls={false}>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2016a-m-2000x1374.png"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2212/a17anaglyph_vanMeijgaarden_f.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2212/GeminidoverBluemoonvalley-2000.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-          </Carousel>
-          <Carousel className="home-container-child" fade controls={false}>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2210/CannonSupernova_English_8404.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2212/Pleiades_Estes_3000.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-            <Carousel.Item interval={3000}>
-              <img
-                className="home-pic-fade"
-                src="https://apod.nasa.gov/apod/image/2212/M16Pillar_WebbOzsarac_1668.jpg"
-                alt="space-pic"
-              ></img>
-            </Carousel.Item>
-          </Carousel>
+          <div className="home-container-child">
+            <img
+              className="spc-img"
+              src="https://apod.nasa.gov/apod/image/2209/TarantulaNearIr_Webb_1396.jpg"
+            ></img>
+          </div>
+          <div className="home-container-child">
+            <img
+              className="spc-img2"
+              src="https://apod.nasa.gov/apod/image/2205/CatsPaw_Bemmerl_4412.jpg"
+            ></img>
+          </div>{" "}
+          <div className="home-container-child">
+            <img
+              className="spc-img3"
+              src="https://apod.nasa.gov/apod/image/2212/B33LRGB_fb.png"
+            ></img>
+          </div>{" "}
+          <div className="home-container-child">
+            <img
+              className="spc-img4"
+              src="https://apod.nasa.gov/apod/image/2212/Thor_Rochford_2404.jpg"
+            ></img>
+          </div>
         </div>
       </div>
     </div>

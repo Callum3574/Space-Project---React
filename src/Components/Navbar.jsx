@@ -28,12 +28,6 @@ const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
           </Link>
         </li>
 
-        <li className="nav-text">
-          <Link id="space-nav" to="Weather">
-            WEATHER
-          </Link>
-        </li>
-
         {!successfulSignIn ? (
           <li style={{ zIndex: "2" }}>
             <NavDropdown
@@ -60,7 +54,7 @@ const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
             </p>
             <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.2">Logout</NavDropdown.Item>
+            <NavDropdown.Item href="Login">Logout</NavDropdown.Item>
           </NavDropdown>
         )}
       </ul>

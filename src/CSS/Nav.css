@@ -65,10 +65,6 @@ a:active {
   text-decoration: none;
 }
 
-img:hover {
-  transform: scale(1.5);
-}
-
 #space-nav {
   color: white;
 }
