@@ -1,0 +1,24 @@
+.date-input {
+  background-color: #313131;
+  border: none;
+  width: 300px;
+  height: 40px;
+  padding-bottom: px;
+  border-radius: 8px;
+  color: white;
+  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+}
+
+.button-space {
+  margin-left: 10px;
+  background-color: #313131;
+  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+  border: none;
+  transition: transform 1s;
+  margin-top: -2px;
+}
+
+.button-space:hover {
+  background-color: rgb(45, 24, 67);
+  cursor: pointer;
+}

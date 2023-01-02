@@ -1,0 +1,28 @@
+.bg-glass {
+  background-color: rgb(36, 35, 35);
+  color: white;
+  border-radius: 16px;
+  height: 80%;
+  transition: transform 0.5s;
+  animation: gradient 10s linear 10s infinite alternate;
+  border: none;
+  z-index: 1;
+}
+
+@keyframes gradient {
+  0% {
+    filter: drop-shadow(0 0 0.75rem rgb(147, 147, 147));
+  }
+  25% {
+    filter: drop-shadow(0 0 0.75rem rgb(117, 117, 117));
+  }
+  50% {
+    filter: drop-shadow(0 0 0.75rem rgb(25, 19, 40));
+  }
+  75% {
+    filter: drop-shadow(0 0 0.75rem rgb(33, 33, 33));
+  }
+  100% {
+    filter: drop-shadow(0 0 0.75rem rgb(10, 10, 10));
+  }
+}

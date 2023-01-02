@@ -1,0 +1,12 @@
+.picture-container {
+  height: 400px;
+  width: 600px;
+  margin: 20px;
+}
+
+.nasa-picture {
+  height: 400px;
+  width: 600px;
+  transition: transform 1.5s;
+  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+}

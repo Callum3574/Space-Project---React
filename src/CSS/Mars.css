@@ -1,0 +1,32 @@
+.mars-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.button-child {
+  margin: 10px;
+}
+
+.cam-button {
+  margin-left: 20px;
+  background-color: #313131;
+  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+  border: none;
+  transition: transform 1s;
+}
+
+.cam-button:hover {
+  background-color: rgb(45, 24, 67);
+  cursor: pointer;
+}

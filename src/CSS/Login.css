@@ -1,0 +1,36 @@
+.card-body {
+  background-color: rgb(36, 35, 35);
+  color: white;
+  border-radius: 16px;
+  height: 80%;
+  transition: transform 0.5s;
+  animation: gradient 5s linear 5s infinite alternate;
+  border: none;
+}
+
+@keyframes gradient {
+  0% {
+    filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+  }
+  25% {
+    filter: drop-shadow(0 0 0.75rem rgb(2, 2, 2));
+  }
+  50% {
+    filter: drop-shadow(0 0 0.75rem rgb(209, 209, 209));
+  }
+  75% {
+    filter: drop-shadow(0 0 0.75rem rgb(33, 33, 33));
+  }
+  100% {
+    filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+  }
+}
+
+.card-body:hover {
+  transform: scale(1.1);
+  transform: perspective(360deg);
+}
+.ripple {
+  /* background-color: rgb(120, 120, 120);
+  color: white; */
+}
