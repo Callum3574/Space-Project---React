@@ -50,6 +50,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>hello</h1>
       <div>
         <CreateNavBar
           successfulSignIn={successfulSignIn}
