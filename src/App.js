@@ -43,7 +43,7 @@ function App() {
 
   const fetchData = async () => {
     const res = await fetch(
-      "space-project-backend-production.up.railway.app/get_user"
+      "https://space-project-backend-production.up.railway.app/get_user"
     );
 
     const data = await res.json();
