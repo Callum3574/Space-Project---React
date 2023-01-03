@@ -38,13 +38,16 @@ function Signup() {
   };
 
   const fetchSignUp = async () => {
-    const res = await fetch("http://127.0.0.1:5779/create_user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify([signUpCredentials]),
-    });
+    const res = await fetch(
+      "space-project-backend-production.up.railway.app/create_user",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify([signUpCredentials]),
+      }
+    );
     const data = await res.json();
     console.log(data);
 

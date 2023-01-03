@@ -35,11 +35,17 @@ const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
               title="PROFILE"
               menuVariant="light"
             >
-              <NavDropdown.Item to="Login" href="Login">
-                Login
+              <NavDropdown.Item>
+                <Link id="signup" to="Login">
+                  Login
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="Signup">Register</NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link id="register" to="Signup">
+                  Register
+                </Link>
+              </NavDropdown.Item>
             </NavDropdown>
           </li>
         ) : (
