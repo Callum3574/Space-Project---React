@@ -35,16 +35,12 @@ const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
               title="PROFILE"
               menuVariant="light"
             >
-              <NavDropdown.Item>
-                <Link id="signup" to="Login">
-                  Login
-                </Link>
+              <NavDropdown.Item as={Link} to="/Login">
+                Login
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item>
-                <Link id="register" to="Signup">
-                  Register
-                </Link>
+              <NavDropdown.Item as={Link} to="/signup">
+                Sign-up
               </NavDropdown.Item>
             </NavDropdown>
           </li>
@@ -60,7 +56,9 @@ const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
             </p>
             <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="Login">Logout</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/login">
+              Logout
+            </NavDropdown.Item>{" "}
           </NavDropdown>
         )}
       </ul>
