@@ -50,7 +50,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>TEST AGAIN </h1>
       <div>
         <CreateNavBar
           successfulSignIn={successfulSignIn}
@@ -74,8 +73,8 @@ function App() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                Some text as placeholder. In real life you can have the elements
-                you have chosen. Like, text, images, lists, etc.
+                1. You can download the images! <br /> 2. You can sign up to
+                receive daily pictures by email!
               </Offcanvas.Body>
             </Offcanvas>
           </>

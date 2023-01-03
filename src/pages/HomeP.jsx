@@ -1,12 +1,11 @@
 import React from "react";
 import "../CSS/Home.css";
-import Carousel from "react-bootstrap/Carousel";
 
 const HomePage = ({ signInCredentials }) => {
   return (
     <div className="wrapper">
       <div className="home-div">
-        <h1 className="text">WELCOME TO SPACE EXPLORER </h1>
+        <h1 className="tracking-in-expand">WELCOME TO SPACE EXPLORER </h1>
         <div className="flex-container-home">
           <div className="flex-container-child">
             <p className="text">
@@ -26,7 +25,9 @@ const HomePage = ({ signInCredentials }) => {
               rover{" "}
             </p>
           </div>
+          <hr className="breakpoint"></hr>
         </div>
+        <h1 className="tracking-in-expand sub">WHAT YOU MIGHT FIND...</h1>
         <div className="home-flex-container">
           <div className="home-container-child">
             <img

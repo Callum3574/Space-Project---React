@@ -8,5 +8,6 @@
   height: 400px;
   width: 600px;
   transition: transform 1.5s;
-  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+  filter: drop-shadow(0 0 0.75rem rgb(50, 50, 50));
+  margin-bottom: 1.25%;
 }

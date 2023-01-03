@@ -6,13 +6,13 @@
   padding-bottom: px;
   border-radius: 8px;
   color: white;
-  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+  filter: drop-shadow(0 0 0.75rem rgb(29, 29, 29));
 }
 
 .button-space {
   margin-left: 10px;
   background-color: #313131;
-  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+  filter: drop-shadow(0 0 0.75rem rgb(29, 29, 29));
   border: none;
   transition: transform 1s;
   margin-top: -2px;

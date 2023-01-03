@@ -7,7 +7,8 @@ footer {
 }
 
 .sc-iBYQkv {
+  display: flex;
   margin-top: -30px;
-  margin-left: -10%;
+  margin-left: -11%;
   z-index: 1;
 }

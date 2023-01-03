@@ -83,12 +83,7 @@ function Signup() {
             <span style={{ color: "hsl(218, 81%, 75%)" }}>NASA API</span>
           </h1>
 
-          <p className="px-1" style={{ color: "hsl(218, 81%, 85%)" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-            itaque accusantium odio, soluta, corrupti aliquam quibusdam tempora
-            at cupiditate quis eum maiores libero veritatis? Dicta facilis sint
-            aliquid ipsum atque?
-          </p>
+          <p className="px-1" style={{ color: "hsl(218, 81%, 85%)" }}></p>
         </MDBCol>
 
         <MDBCol md="4" className="position-relative">

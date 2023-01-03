@@ -49,7 +49,7 @@ const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
             title="PROFILE"
             menuVariant="light"
           >
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: "center", padding: "10px" }}>
               Signed in as {signInCredentials["email"]}
             </p>
             <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>

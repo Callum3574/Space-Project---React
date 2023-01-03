@@ -32,9 +32,6 @@ const CreateFooter = () => {
               <CDBIcon fab icon="linkedin" />
             </a>
           </CDBBtn>
-          <CDBBtn flat color="dark" className="p-4">
-            <CDBIcon fab icon="facebook-f" />
-          </CDBBtn>
         </CDBBox>
       </CDBBox>
     </CDBFooter>

@@ -21,7 +21,8 @@
 .cam-button {
   margin-left: 20px;
   background-color: #313131;
-  filter: drop-shadow(0 0 0.75rem rgb(45, 24, 67));
+  filter: drop-shadow(0 0 0.75rem rgb(92, 92, 92));
+
   border: none;
   transition: transform 1s;
 }
@@ -30,3 +31,9 @@
   background-color: rgb(45, 24, 67);
   cursor: pointer;
 }
+
+/* hr {
+  width: 2000px;
+  color: white;
+  margin-top: 5%;
+} */
