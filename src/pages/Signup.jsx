@@ -39,7 +39,7 @@ function Signup() {
 
   const fetchSignUp = async () => {
     const res = await fetch(
-      "https://space-explorer-nasa.netlify.app/create_user",
+      "https://space-project-backend-production.up.railway.app/create_user",
       {
         method: "POST",
         headers: {

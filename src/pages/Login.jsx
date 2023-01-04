@@ -35,13 +35,16 @@ const Forms = ({
   };
 
   const fetchSignIn = async () => {
-    const res = await fetch("https://space-explorer-nasa.netlify.app/sign_in", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify([signInCredentials]),
-    });
+    const res = await fetch(
+      "https://space-project-backend-production.up.railway.app/sign_in",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify([signInCredentials]),
+      }
+    );
     const data = await res.json();
     console.log(data);
 
