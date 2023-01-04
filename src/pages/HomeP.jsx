@@ -5,7 +5,7 @@ const HomePage = ({ signInCredentials }) => {
   return (
     <div className="wrapper">
       <div className="home-div">
-        <h1 className="tracking-in-expand">WELCOME TO SPACE EXPLORER </h1>
+        {/* <h1 className="tracking-in-expand">WELCOME TO SPACE EXPLORER </h1>
         <div className="flex-container-home">
           <div className="flex-container-child">
             <p className="text">
@@ -53,7 +53,7 @@ const HomePage = ({ signInCredentials }) => {
               src="https://apod.nasa.gov/apod/image/2212/Thor_Rochford_2404.jpg"
             ></img>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
