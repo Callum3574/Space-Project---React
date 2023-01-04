@@ -29,51 +29,16 @@
 }
 
 body {
-  /* ff 3.6+ */
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 9%,
-    rgba(52, 14, 61, 1) 50%,
-    rgba(5, 1, 5, 1) 100%
-  );
-
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 9%,
-    rgba(52, 14, 61, 1) 50%,
-    rgba(5, 1, 5, 1) 100%
-  );
-
-  /* opera 11.10+ */
-  background: -o-linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 9%,
-    rgba(52, 14, 61, 1) 50%,
-    rgba(5, 1, 5, 1) 100%
-  );
-
-  /* ie 6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050105', endColorstr='#000000', GradientType=0 );
-
-  /* ie 10+ */
-  background: -ms-linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 9%,
-    rgb(74, 20, 86) 50%,
-    rgba(5, 1, 5, 1) 100%
-  );
-
-  /* global 94%+ browsers support */
-  background: linear-gradient(
-    90deg,
-    rgb(0, 0, 0) 9%,
-    rgb(221, 204, 224) 40%,
-    rgb(158, 158, 158) 100%
-  );
   background-size: 600% 600%;
   font-family: "Josefin Sans", sans-serif;
   width: 100%;
+  background: url("./Assets/stars.png"),
+    linear-gradient(
+      90deg,
+      rgb(0, 0, 0) 0%,
+      rgb(46, 46, 46) 60%,
+      rgb(166, 165, 164) 100%
+    );
 }
 
 .button-question {

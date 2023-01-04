@@ -82,7 +82,7 @@ function Signup() {
             style={{ color: "hsl(218, 81%, 95%)" }}
           >
             Space Explorer <br />
-            <span style={{ color: "hsl(218, 81%, 75%)" }}>NASA API</span>
+            <span className="title-text-nasa">NASA API</span>
           </h1>
 
           <p className="px-1" style={{ color: "hsl(218, 81%, 85%)" }}></p>
