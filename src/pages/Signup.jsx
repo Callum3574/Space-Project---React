@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import { useNavigate } from "react-router-dom";
 import "../CSS/Signup.css";
+import Button from "react-bootstrap/Button";
 
 import {
   MDBBtn,
@@ -34,12 +35,11 @@ function Signup() {
     setSignUpCredentials((prev) => {
       return { ...prev, [name]: value };
     });
-    console.log(signUpCredentials);
   };
 
   const fetchSignUp = async () => {
     const res = await fetch(
-      "https://space-project-backend-production.up.railway.app/create_user",
+      "https://space-explorer-nasa.netlify.app/create_user",
       {
         method: "POST",
         headers: {
@@ -49,9 +49,8 @@ function Signup() {
       }
     );
     const data = await res.json();
-    console.log(data);
 
-    if (data["message"] === "user-exists") {
+    if (data["message"] === "failed") {
       setSuccessfulSignUp(false);
       setUserExists(true);
     } else if (data["message"] === "empty-submit") {
@@ -127,9 +126,9 @@ function Signup() {
                 />
               </div>
 
-              <MDBBtn onClick={fetchSignUp} size="lg">
+              <Button onClick={fetchSignUp} size="lg">
                 sign up
-              </MDBBtn>
+              </Button>
               {successfulSignUp && (
                 <div>
                   <h3>Success.. Loading....</h3>

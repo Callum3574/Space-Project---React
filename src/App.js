@@ -42,12 +42,9 @@ function App() {
   };
 
   const fetchData = async () => {
-    const res = await fetch(
-      "https://space-project-backend-production.up.railway.app/get_user"
-    );
+    const res = await fetch("https://space-explorer-nasa.netlify.app/get_user");
 
     const data = await res.json();
-    console.log(data);
   };
 
   return (
@@ -56,6 +53,7 @@ function App() {
         <CreateNavBar
           successfulSignIn={successfulSignIn}
           signInCredentials={signInCredentials}
+          setSuccessfulSignIn={setSuccessfulSignIn}
         />
 
         {!successfulSignIn && (

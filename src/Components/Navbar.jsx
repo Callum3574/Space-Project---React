@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
+const CreateNavBar = ({
+  successfulSignIn,
+  signInCredentials,
+  setSuccessfulSignIn,
+}) => {
   return (
     <nav className="navbar">
       <h1 className="nav-logo">SPACE EXPLORER</h1>
@@ -56,7 +60,13 @@ const CreateNavBar = ({ successfulSignIn, signInCredentials }) => {
             </p>
             <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item as={Link} to="/login">
+            <NavDropdown.Item
+              onClick={() => {
+                setSuccessfulSignIn(false);
+              }}
+              as={Link}
+              to="/login"
+            >
               Logout
             </NavDropdown.Item>{" "}
           </NavDropdown>

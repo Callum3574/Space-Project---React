@@ -20,8 +20,7 @@ const MarsPage = ({ apiKey }) => {
 
   const inputDateMars = () => {
     setMarsDateInput(currentInputMars);
-    console.log(dateInputMars);
-    console.log(marsSRC);
+
   };
 
   const handleCameraClick = (e) => {
@@ -42,7 +41,6 @@ const MarsPage = ({ apiKey }) => {
       const data = await res.json();
       setMarsSRC(data["photos"]);
       setPictureInformation(`SOL: ${data["photos"][0]["sol"]}`);
-      console.log(marsSRC);
     } catch (e) {
       console.error(e);
     }

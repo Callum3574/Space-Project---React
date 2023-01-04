@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 import {
   MDBBtn,
@@ -15,7 +16,6 @@ import {
 import "../CSS/Login.css";
 
 const Forms = ({
-  successfulSignIn,
   setSuccessfulSignIn,
   signInCredentials,
   setSignInCredentials,
@@ -35,16 +35,13 @@ const Forms = ({
   };
 
   const fetchSignIn = async () => {
-    const res = await fetch(
-      "https://space-project-backend-production.up.railway.app/sign_in",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify([signInCredentials]),
-      }
-    );
+    const res = await fetch("https://space-explorer-nasa.netlify.app/sign_in", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([signInCredentials]),
+    });
     const data = await res.json();
     console.log(data);
 
@@ -54,7 +51,6 @@ const Forms = ({
     } else {
       setSuccessfulSignIn(true);
       setIncorrectInputPopUp(false);
-      console.log(signInCredentials);
       setTimeout(() => {
         navigate("/");
       }, 2000);
@@ -101,15 +97,15 @@ const Forms = ({
                   Forgot password?
                 </a>
               </p>
-              <MDBBtn
+              <Button
                 onClick={() => fetchSignIn()}
                 outline
                 className="mx-2 px-5"
-                color="white"
+                color="black"
                 size="lg"
               >
                 Login
-              </MDBBtn>
+              </Button>
 
               {incorrectInputPopUp && (
                 <h3>Incorrect details, please try again..</h3>
