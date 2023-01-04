@@ -4,7 +4,6 @@ import background from "../Assets/Astro.png";
 import rock1 from "../Assets/Rock0027.png";
 import rock2 from "../Assets/Rock0028.png";
 import stars from "../Assets/stars.png";
-import planet from "../Assets/Planet.png";
 
 const HomePage = ({ signInCredentials }) => {
   return (
